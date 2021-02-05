@@ -88,7 +88,7 @@ public class PlayServices : MonoBehaviour
              LeaderboardTimeSpan.AllTime,
          (LeaderboardScoreData data) =>
          {
-             score = (int)data.Scores[0].value;
+             score = (int)data.PlayerScore.value;
          });
             return score;
 

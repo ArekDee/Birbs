@@ -83,7 +83,7 @@ public class StartController : MonoBehaviour
     }
     public void OpenDannyInsta()
     {
-        Application.OpenURL("https://www.instagram.com/danny_games.pl/");
+        Application.OpenURL("https://www.instagram.com/danny_games_pl/");
     }
     public void OpenKrzysInsta()
     {
