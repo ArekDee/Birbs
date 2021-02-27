@@ -25,6 +25,12 @@ public class Save
     public static string RAVEN = "raven";
     public static string DRAGON = "dragon";
     public static string EAGLE = "eagle";
+    public static string AMONGAS = "amongas";
+    public static string PIGEON = "pigeon";
+    public static string OWL = "owl";
+    public static string MARSHMALLOW = "marshmallow";
+    public static string KIWI = "kiwi";
+    public static string BAT = "bat";
 
     public static string FIRST_GAME = "firstgame";
     public static string ORNITHOLOGIST_AND_EXPERT = "ornithologistExpert";
@@ -56,6 +62,12 @@ public class Save
     public bool raven = false;
     public bool dragon = false;
     public bool eagle = false;
+    public bool amongas = false;
+    public bool pigeon = false;
+    public bool owl = false;
+    public bool marshmallow = false;
+    public bool kiwi = false;
+    public bool bat = false;
 
     //achievements
     public bool firstgame = false;

@@ -46,6 +46,12 @@ public class ShopController : MonoBehaviour
         PlayerPrefs.SetInt(Save.RAVEN, (FindObjectOfType<SaveController>().save.raven ? 1 : 0));
         PlayerPrefs.SetInt(Save.DRAGON, (FindObjectOfType<SaveController>().save.dragon ? 1 : 0));
         PlayerPrefs.SetInt(Save.EAGLE, (FindObjectOfType<SaveController>().save.eagle ? 1 : 0));
+        PlayerPrefs.SetInt(Save.AMONGAS, (FindObjectOfType<SaveController>().save.amongas ? 1 : 0));
+        PlayerPrefs.SetInt(Save.PIGEON, (FindObjectOfType<SaveController>().save.pigeon ? 1 : 0));
+        PlayerPrefs.SetInt(Save.OWL, (FindObjectOfType<SaveController>().save.owl ? 1 : 0));
+        PlayerPrefs.SetInt(Save.MARSHMALLOW, (FindObjectOfType<SaveController>().save.marshmallow ? 1 : 0));
+        PlayerPrefs.SetInt(Save.KIWI, (FindObjectOfType<SaveController>().save.kiwi ? 1 : 0));
+        PlayerPrefs.SetInt(Save.BAT, (FindObjectOfType<SaveController>().save.bat ? 1 : 0));
 
         SceneManager.LoadScene("StartScene");
     }
@@ -162,6 +168,36 @@ public class ShopController : MonoBehaviour
             birdsToChoose[15].transform.GetChild(0).gameObject.SetActive(true);
             birdsToChoose[15].transform.GetChild(1).gameObject.SetActive(true);
         }
+        else if (name == "amongas")
+        {
+            birdsToChoose[16].transform.GetChild(0).gameObject.SetActive(true);
+            birdsToChoose[16].transform.GetChild(1).gameObject.SetActive(true);
+        }
+        else if (name == "pigeon")
+        {
+            birdsToChoose[17].transform.GetChild(0).gameObject.SetActive(true);
+            birdsToChoose[17].transform.GetChild(1).gameObject.SetActive(true);
+        }
+        else if (name == "owl")
+        {
+            birdsToChoose[18].transform.GetChild(0).gameObject.SetActive(true);
+            birdsToChoose[18].transform.GetChild(1).gameObject.SetActive(true);
+        }
+        else if (name == "marshmallow")
+        {
+            birdsToChoose[19].transform.GetChild(0).gameObject.SetActive(true);
+            birdsToChoose[19].transform.GetChild(1).gameObject.SetActive(true);
+        }
+        else if (name == "kiwi")
+        {
+            birdsToChoose[20].transform.GetChild(0).gameObject.SetActive(true);
+            birdsToChoose[20].transform.GetChild(1).gameObject.SetActive(true);
+        }
+        else if (name == "bat")
+        {
+            birdsToChoose[21].transform.GetChild(0).gameObject.SetActive(true);
+            birdsToChoose[21].transform.GetChild(1).gameObject.SetActive(true);
+        }
     }
 
     public bool IsBirdBought(string name)
@@ -227,6 +263,30 @@ public class ShopController : MonoBehaviour
             return true;
         }
         if (name == "eagle" && FindObjectOfType<SaveController>().save.eagle)
+        {
+            return true;
+        }
+        if (name == "amongas" && FindObjectOfType<SaveController>().save.amongas)
+        {
+            return true;
+        }
+        if (name == "pigeon" && FindObjectOfType<SaveController>().save.pigeon)
+        {
+            return true;
+        }
+        if (name == "owl" && FindObjectOfType<SaveController>().save.owl)
+        {
+            return true;
+        }
+        if (name == "marshmallow" && FindObjectOfType<SaveController>().save.marshmallow)
+        {
+            return true;
+        }
+        if (name == "kiwi" && FindObjectOfType<SaveController>().save.kiwi)
+        {
+            return true;
+        }
+        if (name == "bat" && FindObjectOfType<SaveController>().save.bat)
         {
             return true;
         }
@@ -298,6 +358,30 @@ public class ShopController : MonoBehaviour
         if (name == "eagle")
         {
             return 500;
+        }
+        if (name == "amongas")
+        {
+            return 0;
+        }
+        if (name == "pigeon")
+        {
+            return 0;
+        }
+        if (name == "owl")
+        {
+            return 0;
+        }
+        if (name == "marshmallow")
+        {
+            return 0;
+        }
+        if (name == "kiwi")
+        {
+            return 0;
+        }
+        if (name == "bat")
+        {
+            return 0;
         }
 
         return 0;
@@ -418,7 +502,43 @@ public class ShopController : MonoBehaviour
             birdsToChoose[15].transform.GetChild(3).transform.GetChild(0).GetComponent<Text>().text = "";
             birbCounter++;
         }
-        if(birbCounter == 16)
+        if (FindObjectOfType<SaveController>().save.amongas)
+        {
+            birdsToChoose[16].transform.GetChild(2).gameObject.SetActive(true);
+            birdsToChoose[16].transform.GetChild(3).GetComponent<Image>().color = new Color(255, 255, 255, 255);
+            birdsToChoose[16].transform.GetChild(3).transform.GetChild(0).GetComponent<Text>().text = "";
+        }
+        if (FindObjectOfType<SaveController>().save.pigeon)
+        {
+            birdsToChoose[17].transform.GetChild(2).gameObject.SetActive(true);
+            birdsToChoose[17].transform.GetChild(3).GetComponent<Image>().color = new Color(255, 255, 255, 255);
+            birdsToChoose[17].transform.GetChild(3).transform.GetChild(0).GetComponent<Text>().text = "";
+        }
+        if (FindObjectOfType<SaveController>().save.owl)
+        {
+            birdsToChoose[18].transform.GetChild(2).gameObject.SetActive(true);
+            birdsToChoose[18].transform.GetChild(3).GetComponent<Image>().color = new Color(255, 255, 255, 255);
+            birdsToChoose[18].transform.GetChild(3).transform.GetChild(0).GetComponent<Text>().text = "";
+        }
+        if (FindObjectOfType<SaveController>().save.marshmallow)
+        {
+            birdsToChoose[19].transform.GetChild(2).gameObject.SetActive(true);
+            birdsToChoose[19].transform.GetChild(3).GetComponent<Image>().color = new Color(255, 255, 255, 255);
+            birdsToChoose[19].transform.GetChild(3).transform.GetChild(0).GetComponent<Text>().text = "";
+        }
+        if (FindObjectOfType<SaveController>().save.kiwi)
+        {
+            birdsToChoose[20].transform.GetChild(2).gameObject.SetActive(true);
+            birdsToChoose[20].transform.GetChild(3).GetComponent<Image>().color = new Color(255, 255, 255, 255);
+            birdsToChoose[20].transform.GetChild(3).transform.GetChild(0).GetComponent<Text>().text = "";
+        }
+        if (FindObjectOfType<SaveController>().save.bat)
+        {
+            birdsToChoose[21].transform.GetChild(2).gameObject.SetActive(true);
+            birdsToChoose[21].transform.GetChild(3).GetComponent<Image>().color = new Color(255, 255, 255, 255);
+            birdsToChoose[21].transform.GetChild(3).transform.GetChild(0).GetComponent<Text>().text = "";
+        }
+        if (birbCounter == 16)
         {
             FindObjectOfType<PlayServices>().UnlockBirbCollectorAchievement();
         }
@@ -488,6 +608,30 @@ public class ShopController : MonoBehaviour
         if (name == "eagle")
         {
             FindObjectOfType<SaveController>().save.eagle = true;
+        }
+        if (name == "amongas")
+        {
+            FindObjectOfType<SaveController>().save.amongas = true;
+        }
+        if (name == "pigeon")
+        {
+            FindObjectOfType<SaveController>().save.pigeon = true;
+        }
+        if (name == "owl")
+        {
+            FindObjectOfType<SaveController>().save.owl = true;
+        }
+        if (name == "marshmallow")
+        {
+            FindObjectOfType<SaveController>().save.marshmallow = true;
+        }
+        if (name == "kiwi")
+        {
+            FindObjectOfType<SaveController>().save.kiwi = true;
+        }
+        if (name == "bat")
+        {
+            FindObjectOfType<SaveController>().save.bat = true;
         }
         IsBirdBought();
     }
