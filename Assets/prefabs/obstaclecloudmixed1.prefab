@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9177826661500657027}
   m_Layer: 0
   m_Name: left (2)
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 1047084092044527271}
   m_Layer: 0
   m_Name: right (2)
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

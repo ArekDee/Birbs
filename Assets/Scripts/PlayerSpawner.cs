@@ -96,6 +96,30 @@ public class PlayerSpawner : MonoBehaviour
         {
             return playerPrefabs[15];
         }
+        if (name == "amongas")
+        {
+            return playerPrefabs[16];
+        }
+        if (name == "pigeon")
+        {
+            return playerPrefabs[17];
+        }
+        if (name == "owl")
+        {
+            return playerPrefabs[18];
+        }
+        if (name == "marshmallow")
+        {
+            return playerPrefabs[19];
+        }
+        if (name == "kiwi")
+        {
+            return playerPrefabs[20];
+        }
+        if (name == "bat")
+        {
+            return playerPrefabs[21];
+        }
         return null;
     }
 }

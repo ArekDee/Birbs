@@ -8,13 +8,15 @@ public class spawnMisteries : MonoBehaviour
     public List<GameObject> misteryPrefabs;
     bool first = true;
     public bool secondChance;
+    string birbName;
     // Start is called before the first frame update
 
     IEnumerator Start()
     {
+        birbName = FindObjectOfType<SaveController>().save.currentBird;
         while (spawn)
         {
-            
+
             if (!first)
             {
                 yield return new WaitForSeconds(FindObjectOfType<GameController>().spawnMisteriesDelay);
@@ -33,7 +35,18 @@ public class spawnMisteries : MonoBehaviour
     private void SpawnAttacker()
     {
         int attackerIndex;
-        attackerIndex = Random.Range(0, misteryPrefabs.Count);
+        if (birbName == Save.AMONGAS || birbName == Save.KIWI)
+        {
+            attackerIndex = Random.Range(0, misteryPrefabs.Count - 1);
+        }
+        else if(birbName == Save.OWL)
+        {
+            attackerIndex = Random.Range(1, misteryPrefabs.Count);
+        }
+        else
+        {
+            attackerIndex = Random.Range(0, misteryPrefabs.Count);
+        }
         Spawn(misteryPrefabs[attackerIndex]);
 
     }

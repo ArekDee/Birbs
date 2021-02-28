@@ -6677,6 +6677,12 @@ MonoBehaviour:
     raven: 0
     dragon: 0
     eagle: 0
+    amongas: 0
+    pigeon: 0
+    owl: 0
+    marshmallow: 0
+    kiwi: 0
+    bat: 0
     firstgame: 0
     ornithologistExpert: 0
     reachTheMoon: 0

@@ -81,6 +81,12 @@ public class SaveController : MonoBehaviour
         PlayerPrefs.SetInt(Save.RAVEN, (save.raven ? 1 : 0));
         PlayerPrefs.SetInt(Save.DRAGON, (save.dragon ? 1 : 0));
         PlayerPrefs.SetInt(Save.EAGLE, (save.eagle ? 1 : 0));
+        PlayerPrefs.SetInt(Save.AMONGAS, (save.amongas ? 1 : 0));
+        PlayerPrefs.SetInt(Save.PIGEON, (save.pigeon ? 1 : 0));
+        PlayerPrefs.SetInt(Save.OWL, (save.owl ? 1 : 0));
+        PlayerPrefs.SetInt(Save.MARSHMALLOW, (save.marshmallow ? 1 : 0));
+        PlayerPrefs.SetInt(Save.KIWI, (save.kiwi ? 1 : 0));
+        PlayerPrefs.SetInt(Save.BAT, (save.bat ? 1 : 0));
 
         PlayerPrefs.SetInt(Save.FIRST_GAME, (save.firstgame ? 1 : 0));
         PlayerPrefs.SetInt(Save.ORNITHOLOGIST_AND_EXPERT, save.ornithologistExpert);
@@ -114,6 +120,12 @@ public class SaveController : MonoBehaviour
         PlayerPrefs.SetInt(Save.RAVEN, 0);
         PlayerPrefs.SetInt(Save.DRAGON, 0);
         PlayerPrefs.SetInt(Save.EAGLE, 0);
+        PlayerPrefs.SetInt(Save.AMONGAS, 0);
+        PlayerPrefs.SetInt(Save.PIGEON, 0);
+        PlayerPrefs.SetInt(Save.OWL, 0);
+        PlayerPrefs.SetInt(Save.MARSHMALLOW, 0);
+        PlayerPrefs.SetInt(Save.KIWI, 0);
+        PlayerPrefs.SetInt(Save.BAT, 0);
 
         PlayerPrefs.SetInt(Save.FIRST_GAME, 0);
         PlayerPrefs.SetInt(Save.ORNITHOLOGIST_AND_EXPERT, 0);
@@ -148,6 +160,12 @@ public class SaveController : MonoBehaviour
         save.raven = Convert.ToBoolean(PlayerPrefs.GetInt(Save.RAVEN, 0));
         save.dragon = Convert.ToBoolean(PlayerPrefs.GetInt(Save.DRAGON, 0));
         save.eagle = Convert.ToBoolean(PlayerPrefs.GetInt(Save.EAGLE, 0));
+        save.amongas = Convert.ToBoolean(PlayerPrefs.GetInt(Save.AMONGAS, 0));
+        save.pigeon = Convert.ToBoolean(PlayerPrefs.GetInt(Save.PIGEON, 0));
+        save.owl = Convert.ToBoolean(PlayerPrefs.GetInt(Save.OWL, 0));
+        save.marshmallow = Convert.ToBoolean(PlayerPrefs.GetInt(Save.MARSHMALLOW, 0));
+        save.kiwi = Convert.ToBoolean(PlayerPrefs.GetInt(Save.KIWI, 0));
+        save.bat = Convert.ToBoolean(PlayerPrefs.GetInt(Save.BAT, 0));
 
         save.firstgame = Convert.ToBoolean(PlayerPrefs.GetInt(Save.FIRST_GAME, 0));
         save.ornithologistExpert = PlayerPrefs.GetInt(Save.ORNITHOLOGIST_AND_EXPERT, 0);
