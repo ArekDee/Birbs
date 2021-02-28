@@ -33,6 +33,10 @@ public class GameController : MonoBehaviour
     void Start()
     {
         FindObjectOfType<PlayerSpawner>().SpawnPlayer(FindObjectOfType<SaveController>().save.currentBird);
+        if(FindObjectOfType<SaveController>().save.currentBird == Save.BAT)
+        {
+            background.GetComponent<Image>().color = new Color32(255, 0, 0, 255);
+        }
         startCanvas.SetActive(true);
         Time.timeScale = 0;
     }

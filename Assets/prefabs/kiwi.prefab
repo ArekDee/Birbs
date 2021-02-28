@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7561301616554283687}
   - component: {fileID: 7561301616554283684}
   - component: {fileID: 7561301616554283685}
+  - component: {fileID: 512160445324542534}
   m_Layer: 0
   m_Name: kiwi
   m_TagString: Player
@@ -154,3 +155,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &512160445324542534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7561301616554283706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e7fd3e5b598d74eb26504c92328974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadKiwi: {fileID: 5786463612759974106, guid: 26540b1e0036fbb418af99ab1c87774e,
+    type: 3}
