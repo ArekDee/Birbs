@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
+using UnityEngine.UI;
 
 public class PlayServices : MonoBehaviour
 {
@@ -34,7 +35,8 @@ public class PlayServices : MonoBehaviour
             PlayGamesPlatform.DebugLogEnabled = true;
             PlayGamesPlatform.Activate();
             //Social.localUser.Authenticate((bool success) => { });
-            PlayGamesPlatform.Instance.Authenticate((bool success) => { });
+            PlayGamesPlatform.Instance.Authenticate((bool success) => {});
+
         }
         catch (Exception exception)
         {
@@ -46,22 +48,7 @@ public class PlayServices : MonoBehaviour
     {
         if (PlayGamesPlatform.Instance.IsAuthenticated())
         {
-            int playScore = GetPlayerBestScore();
-            int localScore = FindObjectOfType<SaveController>().save.bestScore;
-            if (playScore != 0 && playScore < localScore)
-            {
-                PlayGamesPlatform.Instance.ReportScore(localScore, "CgkIr4jp8OcREAIQAw", success => { });
-            }
-            else
-            {
-                PlayGamesPlatform.Instance.ReportScore(score, "CgkIr4jp8OcREAIQAw", success => { });
-            }
-
-            if(playScore > localScore)
-            {
-                FindObjectOfType<SaveController>().save.bestScore = playScore;
-                PlayerPrefs.SetInt(Save.BEST_SCORE, FindObjectOfType<SaveController>().save.bestScore);
-            }
+            PlayGamesPlatform.Instance.ReportScore(score, "CgkIr4jp8OcREAIQAw", success => { });
         }
     }
     public void ShowLeaderboard()
@@ -74,11 +61,11 @@ public class PlayServices : MonoBehaviour
                 PlayGamesPlatform.Instance.ShowLeaderboardUI();
             });
     }
-    public int GetPlayerBestScore()
+    public string GetPlayerBestScore()
     {
         if (PlayGamesPlatform.Instance.IsAuthenticated())
         {
-            int score = 0;
+            string score = "";
 
             PlayGamesPlatform.Instance.LoadScores(
              "CgkIr4jp8OcREAIQAw",
@@ -88,12 +75,13 @@ public class PlayServices : MonoBehaviour
              LeaderboardTimeSpan.AllTime,
          (LeaderboardScoreData data) =>
          {
-             score = (int)data.PlayerScore.value;
+             score = data.PlayerScore.value.ToString();
+
          });
             return score;
 
         }
-        return 0;
+        return "not working xd";
     }
     public void ShowAchievements()
     {

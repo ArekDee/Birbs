@@ -361,27 +361,27 @@ public class ShopController : MonoBehaviour
         }
         if (name == "amongas")
         {
-            return 0;
+            return 500;
         }
         if (name == "pigeon")
         {
-            return 0;
+            return 500;
         }
         if (name == "owl")
         {
-            return 0;
+            return 500;
         }
         if (name == "marshmallow")
         {
-            return 0;
+            return 500;
         }
         if (name == "kiwi")
         {
-            return 0;
+            return 500;
         }
         if (name == "bat")
         {
-            return 0;
+            return 500;
         }
 
         return 0;
